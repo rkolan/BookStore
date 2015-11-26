@@ -1,0 +1,44 @@
+create table CATAGORIES(
+category_id varchar2(5) primary key,
+category_name varchar2(10));
+
+
+create table PRINTING_PRESS(
+press_id varchar2(5) primary key,
+press_name varchar2(10),
+press_address varchar2(45),
+press_phone number(10));
+
+
+
+create table BOOKS(
+book_id varchar2(20) primary key,
+book_title varchar2(30),
+book_price number(5,2),
+book_isbn_no number(16),
+category_id varchar2(5),
+press_id varchar2(5),
+CONSTRAINT category_id
+FOREIGN KEY (category_id) REFERENCES CATAGORIES (category_id),
+CONSTRAINT press_id
+FOREIGN KEY (press_id) REFERENCES PRINTING_PRESS (press_id)
+);
+
+
+create table AUTHORS(
+author_id varchar2(5) primary key,
+author_name varchar2(10),
+author_phone number(10));
+
+
+
+create table BOOK_DETAILS(
+book_id varchar2(20),
+author_id varchar2(5),
+CONSTRAINT book_id
+FOREIGN KEY (book_id) REFERENCES BOOKS (book_id),
+CONSTRAINT author_id
+FOREIGN KEY (author_id) REFERENCES AUTHORS (author_id)
+);
+
+

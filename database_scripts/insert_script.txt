@@ -1,0 +1,23 @@
+
+insert into CATAGORIES values ('C001' , 'Comics');
+insert into CATAGORIES values ('C002' , 'Mystery');
+insert into CATAGORIES values ('C003' , 'Drama');
+
+
+insert into PRINTING_PRESS values ('P001' , 'Padma', 'NC', 1234567890);
+insert into PRINTING_PRESS values ('P002' , 'Sweety', 'MD', 9876543210);
+
+insert into BOOKS values('B001','Comedy for Kids', 34.5, 1234765432716827,'C001','P001');
+insert into BOOKS values('B002','Drama Queen', 65.3, 2351468903462726,'C003','P001');
+insert into BOOKS values('B003','Mystery Time', 653.9, 2645362716489321,'C002','P002');
+insert into BOOKS values('B004','Comedy Time', 34.3, 4532789123090909,'C001','P001');
+
+insert into AUTHORS values('A001','Rohini',534612345);
+insert into AUTHORS values('A002','Kolan',3425123452);
+insert into AUTHORS values('A003','Rkolan',1238759021);
+
+
+insert into BOOK_DETAILS values('B001','A001');
+insert into BOOK_DETAILS values('B001','A002');
+insert into BOOK_DETAILS values('B003','A003');
+insert into BOOK_DETAILS values('B002','A002');
